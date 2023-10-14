@@ -12,6 +12,11 @@ struct AccountView: View {
         NavigationView {
             Text("Account")
                 .navigationTitle("👤 Account")
+                        .focused($focusedTextField, equals: .email)
+                        .onSubmit { focusedTextField = nil }
+                        .submitLabel(.continue)
+            Text("Account")
+                .navigationTitle("👤 Account")
         }
     }
 }
